@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-// import '../../public/featuredJobs.json'
 import { toast } from 'react-toastify'
 
 export const AllJobs = () => {
@@ -8,7 +6,6 @@ export const AllJobs = () => {
     const tableHeaderCss = "px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider bg-gray-50 border-b-2 border-gray-200"
     
     const [jobs, setJobs] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
 
     useEffect( ()=>{
         try {
@@ -22,7 +19,7 @@ export const AllJobs = () => {
             console.error("Error fetching jobs:", error);
         }
 
-    }, [jobs] )
+    }, [] )
     return (
         <div className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>
 
