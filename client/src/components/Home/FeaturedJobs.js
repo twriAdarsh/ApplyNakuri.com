@@ -15,18 +15,27 @@ export const FeaturedJobs = () => {
     }, []);
 
     return (
-        <div className=''>
-            <h1 className='text-center text-xl md:text-2xl font-bold text-primary mt-8 md:mt-6'>Our Featured Jobs</h1>
-            <div className='w-full grid sm:grid-cols-2 md:grid-cols-3  gap-4'>
-                {jobs.map((job, key) => <Card key={key} job={job} />)}
-            </div>
+        <div className='py-10'>
+            <h2 className='text-center text-2xl md:text-3xl font-bold text-primary mb-2'>Our Featured Jobs</h2>
+            <p className='text-center text-gray-500 mb-8'>Discover opportunities that match your skills</p>
+            {jobs.length > 0 ? (
+                <div className='w-full grid sm:grid-cols-2 md:grid-cols-3 gap-6'>
+                    {jobs.map((job, key) => <Card key={key} job={job} />)}
+                </div>
+            ) : (
+                <div className='text-center py-16'>
+                    <box-icon name='briefcase-alt-2' size='48px' color='#ccc'></box-icon>
+                    <p className='text-gray-400 mt-4 text-lg'>No featured jobs available right now.</p>
+                    <p className='text-gray-400 text-sm'>Check back soon for new opportunities!</p>
+                </div>
+            )}
         </div>
     )
 }
 
 function Card({ job }) {
     return (
-        <div className='border shadow-lg card'>
+        <div className='border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 card'>
             {/* Card Header */}
             <div className='flex items-center gap-3'>
                 <div>

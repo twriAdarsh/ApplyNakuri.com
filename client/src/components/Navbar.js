@@ -91,7 +91,7 @@ export const Navbar = () => {
                     <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src={logoURL} className="rounded-full h-12 md:h-16" alt="Flowbite Logo" />
                     </a>
-                    <span className='font-extrabold text-xl md:text-3xl'>humgrow.com</span>
+                    <span className='font-extrabold text-xl md:text-3xl'>ApplyNaukri.com</span>
                 </NavLink>
 
                 {/* MAIN MENU - Lg device */}
@@ -117,7 +117,7 @@ export const Navbar = () => {
                             <div className='hidden md:block'>
                                 <div className='grid grid-cols-2 items-center gap-4'>
                                     Hello, {loginData && loginData.userName}
-                                    <div onClick={logoutHandler} className='py-2 px-5 text-center border-2 bg-gray-200 cursor-pointer rounded'>Logout</div>
+                                    <div onClick={logoutHandler} className='py-2 px-5 text-center bg-red-50 text-red-600 border border-red-200 cursor-pointer rounded-lg hover:bg-red-100 transition-colors font-medium'>Logout</div>
                                 </div>
                             </div>
                             :

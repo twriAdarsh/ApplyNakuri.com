@@ -30,31 +30,26 @@ export const OurCompanies = () => {
   ]
 
   return (
-    <div className="mt-56">
-      <h1 className='text-center text-xl md:text-2xl font-bold text-primary mt-12 md:mt-6 my-6 md:my-12'>Our Trusted Partners</h1>
-            
+    <div className="py-12 bg-gray-50 -mx-4 xl:-mx-24">
+      <div className='max-w-screen-xl mx-auto px-6 md:px-12'>
+        <h2 className='text-center text-lg md:text-xl font-semibold text-gray-500 mb-8'>Trusted by leading companies</h2>
 
-      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-items-center items-center gap-4">
-        {companyLogos.map((obj) => (
-          <li
-            className=""
-            key={obj.id}
-          >
-            <div className="flex flex-col items-center justify-center">
-              <img
-                src={obj.logo}
-                width={70}
-                height={10}
-                alt={obj.logo}
-                class="transform hover:scale-110 transition duration-300 ease-in-out"
-              />
-
-              <h3 className="m-2 font-bold">{obj.title}</h3>
-            </div>
-          </li>
-        ))}
-      </ul>
-      
+        <ul className="grid grid-cols-3 md:grid-cols-6 justify-items-center items-center gap-6">
+          {companyLogos.map((obj) => (
+            <li key={obj.id}>
+              <div className="flex flex-col items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <img
+                  src={obj.logo}
+                  width={70}
+                  height={10}
+                  alt="partner company"
+                  className="transform hover:scale-110 transition duration-300 ease-in-out grayscale hover:grayscale-0"
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ const qnaData = [
   {
     keywords: ['hello', 'hi', 'hey', 'greetings'],
     question: 'Hello / Hi',
-    answer: 'Hello! 👋 Welcome to HumGrow ATS. How can I help you today? You can ask about job postings, applications, roles, or how to use the platform.'
+    answer: 'Hello! 👋 Welcome to ApplyNaukri ATS. How can I help you today? You can ask about job postings, applications, roles, or how to use the platform.'
   },
   {
     keywords: ['post job', 'create job', 'add job', 'new job posting'],
@@ -60,7 +60,7 @@ const qnaData = [
   {
     keywords: ['contact', 'support', 'help', 'assistance'],
     question: 'How do I get support?',
-    answer: 'For any issues or queries, you can:\n• Use this chatbot for quick answers\n• Email us at **support@humgrow.com**\n• Visit our website for more resources'
+    answer: 'For any issues or queries, you can:\n• Use this chatbot for quick answers\n• Email us at **support@applynaukri.com**\n• Visit our website for more resources'
   },
   {
     keywords: ['status', 'application status', 'track', 'my jobs'],
@@ -112,7 +112,7 @@ const suggestedQuestions = [
 export const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { from: 'bot', text: 'Hi! 👋 I\'m the HumGrow Assistant. Ask me anything about the platform!' }
+    { from: 'bot', text: 'Hi! 👋 I\'m the ApplyNaukri Assistant. Ask me anything about the platform!' }
   ]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
@@ -171,7 +171,7 @@ export const ChatBot = () => {
                 <box-icon name='bot' color='white' size='20px'></box-icon>
               </div>
               <div>
-                <h3 className='font-bold text-sm'>HumGrow Assistant</h3>
+                <h3 className='font-bold text-sm'>ApplyNaukri Assistant</h3>
                 <span className='text-xs opacity-80'>Always online</span>
               </div>
             </div>

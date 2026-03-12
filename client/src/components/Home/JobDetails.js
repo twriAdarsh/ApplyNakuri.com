@@ -120,7 +120,7 @@ export const JobDetails = () => {
                                 <img src={LogoURL} alt="Logo" className="rounded-full w-20 md:w-24 h-auto" />
                                 <div className='mx-4 my-3 text-center md:text-left md:my-0'>
                                     <h1 className='text-xl md:text-2xl font-bold'>{job.jobTitle}</h1>
-                                    <p className='text-secondary'>Humgrow.com</p>
+                                    <p className='text-secondary'>ApplyNaukri.com</p>
                                     <p className='text-sm text-gray-700'>Posted - 19/06/2024</p>
                                 </div>
                             </div>
